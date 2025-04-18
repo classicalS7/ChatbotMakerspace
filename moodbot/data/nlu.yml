@@ -122,3 +122,21 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
     - do you understand me at all?
+
+- intent: tell_name
+  examples: |
+    - I am [Susi](name)
+    - Call me [Andre](name)
+    - It's [Olivia](name)
+    - I'm [Julian](name)
+    - My name is [Susi](name)
+    - People call me [Susi](name)
+    - I am called [Olivia](name)
+    - [Julian](name)
+    - They call me [Carmen](name)
+    - Call me [Frank](name)
+    - My friends call me [Liz](name)
+    - [Steffen](name)
+    - [Oliver](name)
+    - [Tobias](name)
+    - [Anita](name)
