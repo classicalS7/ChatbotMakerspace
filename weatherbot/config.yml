@@ -4,7 +4,7 @@ recipe: default.v1
 
 # The assistant project unique identifier
 # This default value must be replaced with a unique assistant name within your deployment
-assistant_id: placeholder_default
+assistant_id: 20250423-200121-mechanical-repository
 
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
@@ -32,24 +32,24 @@ pipeline:
 #   - name: FallbackClassifier
 #     threshold: 0.3
 #     ambiguity_threshold: 0.1
-  - name: SpacyNLP
-    model: "en_core_web_md"
-  - name: SpacyTokenizer
-  - name: SpacyEntityExtractor
-    dimensions: ["GPE"]
-  - name: SpacyFeaturizer
-    pooling: mean
-  - name: LexicalSyntacticFeaturizer
-  - name: CountVectorsFeaturizer
-    analyzer: char_wb
-    min_ngram: 1
-    max_ngram: 4
-  - name: DIETClassifier
-    epochs: 100
-  - name: EntitySynonymMapper
-  - name: FallbackClassifier
-    threshold: 0.3
-    ambiguity_threshold: 0.1
+- name: SpacyNLP
+  model: "en_core_web_md"
+- name: SpacyTokenizer
+- name: SpacyEntityExtractor
+  dimensions: ["GPE"]
+- name: SpacyFeaturizer
+  pooling: mean
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+- name: DIETClassifier
+  epochs: 100
+- name: EntitySynonymMapper
+- name: FallbackClassifier
+  threshold: 0.3
+  ambiguity_threshold: 0.1
 
 
 
@@ -59,12 +59,12 @@ policies:
 # # No configuration for policies was provided. The following default policies were used to train your model.
 # # If you'd like to customize them, uncomment and adjust the policies.
 # # See https://rasa.com/docs/rasa/policies for more information.
-  - name: MemoizationPolicy
-  - name: RulePolicy
-  - name: UnexpecTEDIntentPolicy
-    max_history: 8
-    epochs: 100
-  - name: TEDPolicy
-    max_history: 8
-    epochs: 100
+- name: MemoizationPolicy
+- name: RulePolicy
+- name: UnexpecTEDIntentPolicy
+  max_history: 8
+  epochs: 100
+- name: TEDPolicy
+  max_history: 8
+  epochs: 100
 #     constrain_similarities: true
